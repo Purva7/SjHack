@@ -1,0 +1,613 @@
+<style>
+    html,
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .styles__ribbon {
+        background-color: rgba(0, 0, 0, .06);
+        color: #fff;
+        width: 90%;
+        margin: 80px 0 80px 0;
+        padding: 3em 0;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .mdl-button,
+    .mdl-typography--display-4,
+    .mdl-typography--display-3,
+    .mdl-typography--display-2 {
+        font-weight: 300;
+    }
+    
+    .mdl-button--accent.mdl-button--accent.mdl-button--raised,
+    .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+        background: #5f713a;
+        color: #fff;
+    }
+    
+    a.mdl-button:hover {
+        text-decoration: none;
+        color: rgba(255, 255, 255, .9);
+    }
+    
+    .text--bold-shadow {
+        text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    }
+    
+    footer {
+        background: #fafafa;
+        padding: 3em 0;
+        color: #555;
+    }
+    
+    a {
+        color: #009688;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    .material-icons.md-18 {
+        font-size: 18px;
+    }
+    
+    .material-icons.md-24 {
+        font-size: 24px;
+    }
+    
+    .material-icons.md-36 {
+        font-size: 36px;
+    }
+    
+    .material-icons.md-48 {
+        font-size: 48px;
+    }
+    
+    .material-icons.md-96 {
+        font-size: 96px;
+    }
+    
+    .material-icons.md-dark {
+        color: rgba(0, 0, 0, 0.54);
+    }
+    
+    .material-icons.md-dark.md-inactive {
+        color: rgba(0, 0, 0, 0.26);
+    }
+    
+    .material-icons.md-light {
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    .material-icons.md-light.md-inactive {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .styles__ribbon--lime {
+        background-color: #cddc39;
+    }
+    
+    .mdl-button--large {
+        font-size: 24px;
+        height: 48px;
+        padding: 0 16px;
+    }
+    
+    a.mdl-button--large {
+        padding-top: 10px;
+    }
+    
+    .styles__ribbon--cyan {
+        background-color: #00bcd4;
+        opacity: .8;
+    }
+    
+    .styles__ribbon--teal {
+        background-color: #4BB5C1;
+    }
+    
+    .styles__ribbon.styles__ribbon--right {
+        margin-left: 10%;
+    }
+    
+    pre {
+        font-size: 87%;
+        background-color: rgba(0, 0, 0, .06);
+        border-radius: 3px;
+        padding: 16px;
+    }
+    
+    .left-col {
+        padding-right: 40px;
+    }
+    
+    .pull-right {
+        float: right;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    hr {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        opacity: .5;
+    }
+    
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    .page-content {
+        background: #fff;
+        color: #555;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 3em 1em;
+        box-sizing: border-box;
+    }
+    
+    .layout-transparent {
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+    }
+    
+    .layout-transparent .mdl-layout__header,
+    .layout-transparent .mdl-layout__drawer-button,
+    .layout-transparent .mdl-layout__content {
+        color: white;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .mdl-typography--display-4 {
+            font-size: 64px!important;
+        }
+        .mdl-typography--display-2 {
+            font-size: 36px;
+        }
+        .mdl-typeography--display-3 {
+            font-size: 32px;
+        }
+        .mdl-button--large {
+            font-size: 18px;
+            height: 36px;
+            padding: 0 12px;
+        }
+        a.mdl-button--large {
+            padding-top: 4px;
+        }
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 6px;
+        }
+        .styles__ribbon {
+            padding: 0 1em;
+            width: 90%;
+            margin: 0;
+        }
+        .styles__ribbon--right {
+            margin: 0 0 0 10%;
+        }
+        hr {
+            margin: 2em 0;
+        }
+    }
+    
+    md-fab-speed-dial {
+        position: fixed;
+        right: 1em;
+        bottom: 1em;
+        z-index: 20;
+    }
+    div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+</style>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div layout="row" style="min-height:100%;" ng-controller="businessinfoCtrl">
+    <menu></menu>
+    <md-content flex layout="column">
+        <md-toolbar style="position:fixed;">
+            <div class="md-toolbar-tools">
+
+                <md-button class="md-icon-button" ng-click="toggle()" aria-label="Menu" hide-gt-md>
+                    <md-icon md-svg-icon="/icons/fi-thumbnails.svg"></md-icon>
+                </md-button>
+                <h3 md-whiteframe="3">
+ Main Street Launch
+          </h3>
+          </br>
+          <p>
+           <h5 md-whiteframe="3">
+            
+					East Oakland to Downtown Merchant Directory
+				
+          </h5></p>
+            </div>
+        </md-toolbar>
+        <!-- Mark Code -->
+	<header id="header">
+	 <div flex layout="row">
+			<div class="row">
+				<!--<div class="main-logo col-md-2 col-lg-1">
+					<img src="img/logos/mainstreet logo transparency 150x150.png" alt="logo">
+				</div>-->
+                </br>
+                </br>
+				
+		
+				<div class="col-md-4 col-lg-6">
+					<div>
+						<div><a href="about.html">About</a></div> 
+						<div><a href="contact.html">Contact</a></div>
+						<div><a href="newsletter.html">Newsletter</a></div>
+					</div>
+					<div class="input-group"> 
+						<input class="form-control" placeholder="Search for..." aria-label="Search text box"> 
+						<div class="input-group-btn"> 
+							<button type="button" class="btn btn-default" aria-label="Start search">
+								<span class="glyphicon glyphicon-search"></span></button> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Main Navigation -->
+		<div class="inner container-fluid">
+			<div class="relative">
+				<!-- Mobile Menu Button -->
+				<div class="nav-icon">
+					<div></div>
+				</div>
+                <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Home</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">All</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Auto</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Dining</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Grocery</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Hair & Beauty</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Retail</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Non Profit</md-button>
+                 <md-button class="md-primary md-raised" type="submit" aria-label="Submit">Neighborhoods</md-button>
+				<!--<p>
+					<button class="btn btn-default main-blue">Home</button>
+					<button class="btn btn-default main-orange">All</button>
+					<button class="btn btn-default main-green">Auto</button>
+					<button class="btn btn-default main-cyan">Dining</button>
+					<button class="btn btn-default main-purple">Grocery</button>
+					<button class="btn btn-default main-orange">Hair &amp; Beauty</button>
+					<button class="btn btn-default main-green">Retail</button>
+					<button class="btn btn-default main-cyan">Non-profit</button>
+					<button class="btn btn-default main-red">Neighborhoods</button>
+				</p>-->
+			</div>
+		</div>
+        </br>
+        </br>
+        <div id="content">
+        <section class="sec-xs gray">
+			<div class="inner">
+
+				<ul>
+                    <a href="#">A</a>
+                    <a href="#">B</a>
+                    <a href="#">C</a>
+                    <a href="#">D</a>
+                    <a href="#">E</a>
+                    <a href="#">F</a>
+                    <a href="#">G</a>
+                    <a href="#">H</a>
+                    <a href="#">I</a>
+                    <a href="#">J</a>
+                    <a href="#">K</a>
+                    <a href="#">L</a>
+                    <a href="#">M</a>
+                    <a href="#">N</a>
+                    <a href="#">O</a>
+                    <a href="#">P</a>
+                    <a href="#">Q</a>
+                    <a href="#">R</a>
+                    <a href="#">S</a>
+                    <a href="#">T</a>
+                    <a href="#">U</a>
+                    <a href="#">V</a>
+                    <a href="#">W</a>
+                    <a href="#">X</a>
+                    <a href="#">Y</a>
+                    <a href="#">Z</a>
+                    
+		</ul>
+				<!--<div class="clearfix"></div>
+			</div>-->
+		
+        </div>
+        </secttion>
+            </div>
+       </br>
+       </br>
+       </br>
+        <!-- end of Mark code--->
+        <md-content >
+            <!--    purva copy        -->
+<!--<md-sidenav class="md-sidenav-left md-whiteframe-z5" md-component-id="left">-->
+    <!--<md-toolbar>
+        <h1 class="md-toolbar-tools">Businessinfo</h1>
+    </md-toolbar>-->
+    <md-content>
+        <!--<md-input-container>
+            <label>Search</label>
+            <input type="text" ng-model="searchPosts" ng-model-options="{ debounce: 500 }">
+        </md-input-container>-->
+        <md-list ng-hide="bizdetail">
+            <p layout-padding ng-hide="binfos.length">
+                No content Businessinfo.
+            </p>
+            <md-list-item style="border:1px; color:#ffff;"  ng-repeat="post in binfos | orderBy:'-created' | filter:searchPosts" aria-label="Show content" ng-click="showbiz(post)" class="md-2-line">
+               <md-icon md-svg-icon="icons/fi-home.svg" aria-label="Delete content" class="md-primary"></md-icon>
+                <div class="md-list-item-text">
+                    <h3>{{post.AccountName}}</h3>
+                    <p ng-if="post.about">About page</p>
+                </div>
+
+                <!--<md-icon md-svg-icon="icons/fi-trash.svg" aria-label="Delete content" ng-click="delete($event, post)" class="md-secondary"></md-icon>-->
+            </md-list-item>
+            <md-divider></md-divider>
+            <!--<md-list-item ng-click="toggle()" class="md-warn">
+                Close
+            </md-list-item>-->
+        </md-list> 
+    </md-content>
+<!--</md-sidenav>-->
+<!--<md-button class="md-fab md-accent" ng-click="toggle()" aria-label="Show list of contents">
+    <md-icon md-svg-src="icons/fi-list.svg" style="width:20px; height:20px;"></md-icon>
+</md-button>-->
+<!--<div ng-show="bizdetail">-->
+   <div flex layout="row">
+    <md-content flex layout-padding id="content">
+<!--<md-content  layout="column" layout-gt-md="row" layout-padding>
+    <md-content layout="column" flex>-->
+        <!--<h3>Markdown</h3>--> 
+        <form ng-submit="save()">
+            <!--<md-input-container>-->
+<div id="" style="overflow-y:scroll; overflow:auto; height:200px;">
+           <nav>        
+               <div style="overflow-y:scroll; overflow:auto; height:200px;width:100px; background-image: url(lafronteranightclub.png);
+        background-position: left;
+        background-size: cover;"></div>
+ <!--<div id="" style="overflow-y:scroll; overflow:auto; height:200px;width:100px;">-->
+      
+  <ul>
+    <!--<li><a href="#">London</a></li>
+    <li><a href="#">Paris</a></li>
+    <li><a href="#">Tokyo</a></li>-->
+  </ul>
+</nav>
+<div>
+                <md-list-item-text ng-repeat="post in binfos | orderBy:'-created' | filter:searchPosts" ng-click="showbiz(post)" class="md-2-line">
+                <!--<label>Title</label>
+                <p> {{newBusinessinfo.title}}</p>-->
+                <!--<label> Account Name</label>-->
+
+                  <p><label> Account Name</label> : {{post.AccountName}}</p>
+                 <!--<label> Last Activity</label>-->
+                  <p><label> Last Activity</label> : {{post.LastActivity}}</p>
+          <!--<label>   Directory Business Name  </label> -->
+           <p><label>   Directory Business Name  </label> : {{post.DirectoryBusinessName}}</p>      
+          <!--<label>   Directory Business Phone</label>-->
+          <p> <label>   Directory Business Phone</label> : {{post.DirectoryBusinessPhone}}</p>   
+          <!--<label>   Directory Categories</label>-->
+          <p> <label>   Directory Categories</label> : {{post.DirectoryCategories}}</p>   
+          <!--<label>   Directory Full Description</label>-->
+          <p> <label>   Directory Listing Description</label> : {{post.DirectoryFullDescription}}</p>   
+          <!--<label>   Directory Listing Description</label>-->
+           <p> <label>   Directory Listing Description</label> : {{post.DirectoryListingDescription}}</p>   
+          <!--<label>   Directory Location Description</label>-->
+           <p> <label>   Directory Location Description</label> : {{post.DirectoryLocationDescription}}</p>   
+          <!--<label>   Directory Neighborhood</label> -->
+           <p><label>   Directory Neighborhood</label> : {{post.DirectoryNeighborhood}}</p>   
+          <!--<label>   Directory Station Stop</label>-->
+           <p>  <label>   Directory Station Stop</label> : {{post.DirectoryStationStop}}</p>   
+          <!--<label>  Directory Website Link</label>-->
+           <p>  <label>  Directory Website Link</label> : {{post.DirectoryWebsiteLink}}</p>   
+          <!--<label>  Directory Yelp Link</label>-->
+           <p> <label>  Directory Yelp Link</label> : {{post.DirectoryYelpLink}}</p>     
+          <!--<label>  Monday:</label>-->
+           <p><label>  Monday:</label>  {{post.MondayOpen}} To {{post.MondayClose}}</p>   
+          <!--<label>  Monday Close</label>-->
+           <!--<p> {{post.MondayClose}}</p>   -->
+          <!--<label>  Tuesday: </label>-->
+           <p> <label>  Tuesday: </label> {{post.TuesdayOpen}} To {{post.TuesdayClose}}</p>   
+          <!--<label>  Tuesday Close </label>
+           <p> {{post.TuesdayClose}}</p>   -->
+          <!--<label>  Wednesday: </label>-->
+           <p>  <label>  Wednesday: </label> {{post.WednesdayOpen}} To {{post.WednesdayClose}}</p>   
+          <!--<label>  Wednesday Close </label>
+           <p> {{post.WednesdayClose}}</p>   -->
+          <!--<label>  Thursday: </label>-->
+           <p> <label>  Thursday: </label>  {{post.ThursdayOpen}} To {{post.ThursdayClose}}</p>   
+          <!--<label>  Thursday Close </label>
+           <p> {{post.ThursdayClose}}</p>   -->
+          <!--<label>  Friday:</label>-->
+           <p><label>  Friday:</label> {{post.FridayOpen}} To {{post.FridayClose }}</p>   
+          <!--<label>  Friday Close </label>
+           <p> {{post.FridayClose }}</p>   -->
+          <!--<label>  Saturday: </label>-->
+           <p> <label>  Saturday: </label> {{post.SaturdayOpen}} To {{post.SaturdayClose}}</p>   
+          <!--<label>  Saturday Close </label>
+           <p> {{post.SaturdayClose}}</p>   -->
+          <!--<label>  Sunday: </label>-->
+           <p> <label>  Sunday: </label> {{post.SundayOpen}} To  {{post.SundayClose}}</p>   
+          <!--<label>  Sunday Close </label>
+           <p> {{post.SundayClose}}</p>   -->
+          <!--<label>  Billing Address </label>-->
+           <p> <label>  Billing Address </label> : {{post.BillingAddress}}</p>   
+          <!--<label>  Billing City </label>-->
+           <p>  <label>  Billing City </label> : {{post.BillingCity}}</p>   
+          <!--<label>  Billing Zip </label>-->
+           <p>  <label>  Billing Zip </label> : {{newBusinessinfo.BillingZip}}</p>   
+     
+            <!--<md-button class="md-primary md-raised" type="submit" aria-label="Submit">Submit</md-button>
+            <md-button class="md-raised" type="button" ng-click="reset()" aria-label="Cancel">Cancel</md-button>-->
+                </md-list-item-text>
+                </div>
+        <!--</form>
+    </md-content>-->
+    </md-content>
+  
+    <md-content layout="column" flex>
+        <h1>{{newBusinessinfo.title}}</h1>
+        <md-content layout="column" marked="newBusinessinfo.content"></md-content>
+    </md-content>
+</md-content>
+  </div>
+<style>
+    img {
+        max-width: 100%;
+    }
+</style>
+
+
+
+   
+
+            <!--   purva copy         -->
+
+
+        </md-content>
+        <br>
+        <ui-view></ui-view>
+    </md-content>
+</div>
+
+<!--///////////////-->
+
+<!--        About     -->
+<!--
+            <center>
+                <h1>{{::aboutContent.title}} </h1>
+                <md-content layout="column" marked="aboutContent.content"></md-content>
+            </center>
+-->
+<!--            Other contents     -->
+<!--
+            <md-content layout="row" layout-padding>
+                <md-content flex-gt-sm="50" flex ng-repeat="content in otherContents | filter:search">
+                    <h3>{{::content.title}}</h3>
+                    <md-content layout="column" marked="content.content"></md-content>
+                </md-content>
+            </md-content>
+            <md-divider></md-divider>
+            <md-content layout-padding>
+                <center>
+                    <h1>Member info</h1>
+                    <md-grid-list md-cols-sm="2" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile ng-repeat="member in members | filter:search | orderBy:'lastName'" md-rowspan="1" md-colspan="2" md-colspan-sm="2" md-gutter="2em" md-gutter-gt-sm="1em" ng-style="{'background-image' : 'url(' + member.photo + ')'}" style="background-size: cover; background-position:center;">
+                            <md-grid-tile-footer>
+                                <h3>{{::member.lastName}}, {{::member.firstName}} - {{::member.fullCategory.name}}</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                </center>
+            </md-content>
+-->
+<!--            Laborator     -->
+<!--
+            <md-divider></md-divider>
+            <md-content layout-padding style="padding-left: 15%; padding-right: 15%;">
+                <center>
+                    <h1>Service</h1>
+                </center>
+                <md-content ng-repeat="category in serviceCategories | filter:search" layout-padding>
+                    <h3>{{::category.name}}</h3>
+                    <md-list flex="80">
+                        <md-list-item ng-repeat="service in category.services | filter:search" class="md-2-line">
+                            <div class="md-list-item-text">
+                                <h3>{{::service.name}}</h3>
+                                <p>{{::service.days | number}} zile</p>
+                                <span flex></span>
+                                <p class="md-secondary">{{::service.price | currency:'RON'}}</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-content>
+            <md-divider></md-divider>
+            <md-content layout-padding id="polls">
+                <center>
+                    <h1>Questions</h1>
+                </center>
+                <md-content layout-padding>
+                    <md-content layout-padding ng-repeat="question in questions | filter:search">
+                        <form ng-submit="sendPoll()">
+                            <md-input-container>
+                                <label>Full Name</label>
+                                <input type="text" ng-model="newPoll.fullName">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Telephone</label>
+                                <input type="text" ng-model="newPoll.tel">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Email</label>
+                                <input type="email" ng-model="newPoll.email">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Address</label>
+                                <textarea cols="30" rows="3" ng-model="newPoll.address"></textarea>
+                            </md-input-container>
+                            <h3>{{::$index+1}}. {{::question.question}}</h3>
+                            <md-radio-group ng-model="newPoll.answers[$index]">
+                                <md-radio-button ng-repeat="answer in question.answers" value="{{::question.question}}-{{::answer.text}}">{{::answer.text}}</md-radio-button>
+                            </md-radio-group>
+                            <md-button type="submit" class="md-primary">Submit</md-button>
+                        </form>
+                    </md-content>
+                </md-content>
+            </md-content>
+       
+ -->

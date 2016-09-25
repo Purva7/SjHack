@@ -1,0 +1,245 @@
+{
+	"type": "Collection",
+	"properties": {
+		"AccountName": {
+			"name": "AccountName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "AccountName",
+			"order": 0
+		},
+		"DirectoryBusinessName": {
+			"name": "DirectoryBusinessName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryBusinessName",
+			"order": 1
+		},
+		"DirectoryBusinessPhone": {
+			"name": "DirectoryBusinessPhone",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryBusinessPhone",
+			"order": 2
+		},
+		"DirectoryCategories": {
+			"name": "DirectoryCategories",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryCategories",
+			"order": 3
+		},
+		"DirectoryFullDescription": {
+			"name": "DirectoryFullDescription",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryFullDescription",
+			"order": 4
+		},
+		"DirectoryListingDescription": {
+			"name": "DirectoryListingDescription",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryListingDescription",
+			"order": 5
+		},
+		"DirectoryLocationDescription": {
+			"name": "DirectoryLocationDescription",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryLocationDescription",
+			"order": 6
+		},
+		"DirectoryNeighborhood": {
+			"name": "DirectoryNeighborhood",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryNeighborhood",
+			"order": 7
+		},
+		"DirectoryStationStop": {
+			"name": "DirectoryStationStop",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryStationStop",
+			"order": 8
+		},
+		"DirectoryWebsiteLink": {
+			"name": "DirectoryWebsiteLink",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryWebsiteLink",
+			"order": 9
+		},
+		"DirectoryYelpLink": {
+			"name": "DirectoryYelpLink",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "DirectoryYelpLink",
+			"order": 10
+		},
+		"MondayOpen": {
+			"name": "MondayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "MondayOpen",
+			"order": 11
+		},
+		"MondayClose": {
+			"name": "MondayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "MondayClose",
+			"order": 12
+		},
+		"TuesdayOpen": {
+			"name": "TuesdayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "TuesdayOpen",
+			"order": 13
+		},
+		"TuesdayClose": {
+			"name": "TuesdayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "TuesdayClose",
+			"order": 14
+		},
+		"WednesdayOpen": {
+			"name": "WednesdayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "WednesdayOpen",
+			"order": 15
+		},
+		"WednesdayClose": {
+			"name": "WednesdayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "WednesdayClose",
+			"order": 16
+		},
+		"ThursdayOpen": {
+			"name": "ThursdayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "ThursdayOpen",
+			"order": 17
+		},
+		"ThursdayClose": {
+			"name": "ThursdayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "ThursdayClose",
+			"order": 18
+		},
+		"FridayOpen": {
+			"name": "FridayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "FridayOpen",
+			"order": 19
+		},
+		"FridayClose": {
+			"name": "FridayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "FridayClose",
+			"order": 20
+		},
+		"SaturdayOpen": {
+			"name": "SaturdayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "SaturdayOpen",
+			"order": 21
+		},
+		"SaturdayClose": {
+			"name": "SaturdayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "SaturdayClose",
+			"order": 22
+		},
+		"SundayOpen": {
+			"name": "SundayOpen",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "SundayOpen",
+			"order": 23
+		},
+		"SundayClose": {
+			"name": "SundayClose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "SundayClose",
+			"order": 24
+		},
+		"BillingAddress": {
+			"name": "BillingAddress",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "BillingAddress",
+			"order": 25
+		},
+		"BillingCity": {
+			"name": "BillingCity",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "BillingCity",
+			"order": 26
+		},
+		"BillingZip": {
+			"name": "BillingZip",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "BillingZip",
+			"order": 27
+		},
+		"BillingCountry": {
+			"name": "BillingCountry",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "BillingCountry",
+			"order": 28
+		},
+		"BillingState": {
+			"name": "BillingState",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "BillingState",
+			"order": 29
+		}
+	}
+}
